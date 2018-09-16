@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0404E120214E55CE00AB6F6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404E11F214E55CE00AB6F6C /* AppDelegate.swift */; };
-		0404E122214E55CE00AB6F6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404E121214E55CE00AB6F6C /* ViewController.swift */; };
+		0404E122214E55CE00AB6F6C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404E121214E55CE00AB6F6C /* CategoryViewController.swift */; };
 		0404E125214E55CE00AB6F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0404E123214E55CE00AB6F6C /* Main.storyboard */; };
 		0404E127214E55D000AB6F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0404E126214E55D000AB6F6C /* Assets.xcassets */; };
 		0404E12A214E55D000AB6F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0404E128214E55D000AB6F6C /* LaunchScreen.storyboard */; };
+		0404E135214E6B8600AB6F6C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404E134214E6B8600AB6F6C /* Item.swift */; };
+		0404E137214E6B9700AB6F6C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404E136214E6B9700AB6F6C /* Category.swift */; };
 		598335CD183F151E6B1A1750 /* Pods_testRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8757F9F08E918F770F628537 /* Pods_testRealm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0404E11C214E55CE00AB6F6C /* testRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0404E11F214E55CE00AB6F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0404E121214E55CE00AB6F6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0404E121214E55CE00AB6F6C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0404E124214E55CE00AB6F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0404E126214E55D000AB6F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0404E129214E55D000AB6F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0404E12B214E55D000AB6F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0404E134214E6B8600AB6F6C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0404E136214E6B9700AB6F6C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2315EE78B935C098A730E270 /* Pods-testRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testRealm/Pods-testRealm.debug.xcconfig"; sourceTree = "<group>"; };
 		232163F41079EC5D354A5727 /* Pods-testRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-testRealm/Pods-testRealm.release.xcconfig"; sourceTree = "<group>"; };
 		8757F9F08E918F770F628537 /* Pods_testRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,13 +66,23 @@
 			isa = PBXGroup;
 			children = (
 				0404E11F214E55CE00AB6F6C /* AppDelegate.swift */,
-				0404E121214E55CE00AB6F6C /* ViewController.swift */,
+				0404E121214E55CE00AB6F6C /* CategoryViewController.swift */,
+				0404E133214E6B6800AB6F6C /* Data model */,
 				0404E123214E55CE00AB6F6C /* Main.storyboard */,
 				0404E126214E55D000AB6F6C /* Assets.xcassets */,
 				0404E128214E55D000AB6F6C /* LaunchScreen.storyboard */,
 				0404E12B214E55D000AB6F6C /* Info.plist */,
 			);
 			path = testRealm;
+			sourceTree = "<group>";
+		};
+		0404E133214E6B6800AB6F6C /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				0404E134214E6B8600AB6F6C /* Item.swift */,
+				0404E136214E6B9700AB6F6C /* Category.swift */,
+			);
+			path = "Data model";
 			sourceTree = "<group>";
 		};
 		A22198C8DC1DE651044F049B /* Frameworks */ = {
@@ -202,8 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0404E122214E55CE00AB6F6C /* ViewController.swift in Sources */,
+				0404E122214E55CE00AB6F6C /* CategoryViewController.swift in Sources */,
+				0404E135214E6B8600AB6F6C /* Item.swift in Sources */,
 				0404E120214E55CE00AB6F6C /* AppDelegate.swift in Sources */,
+				0404E137214E6B9700AB6F6C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +369,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX67QD825E;
 				INFOPLIST_FILE = testRealm/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = volpis.testRealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -369,7 +388,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX67QD825E;
 				INFOPLIST_FILE = testRealm/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = volpis.testRealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
